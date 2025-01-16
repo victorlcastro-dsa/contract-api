@@ -1,0 +1,32 @@
+[project]
+name = "contract-api"
+version = "0.1.0"
+description = "Uma API desenvolvida em Python com o framework Quart, projetada para gerenciar informações relacionadas a contratos. Oferece rotas para criação, consulta, atualização e exclusão de dados"
+authors = [
+    {name = "Victor L. Castro",email = "victorlcastro.dsa@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "quart[dotenv] (>=0.20.0,<0.21.0)",
+    "quart-schema (>=0.21.0,<0.22.0)",
+    "pydantic (>=2.10.5,<3.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.scripts]
+start = "src.api:run"
+
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^0.25.2"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
