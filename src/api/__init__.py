@@ -3,9 +3,11 @@ from quart import Quart #,request, jsonify
 # from pydantic import BaseModel
 # from datetime import datetime
 from src.api.database import init_db, close_db
+from quart_bcrypt import Bcrypt
 
 app = Quart(__name__)
 app.config["DEBUG"] = True  # Enable debug mode
+app.config["BCRYPT_LOG_ROUNDS"] = 12  # Security configuration for Bcrypt
 # QuartSchema(app)
 
 # class TodoIn(BaseModel):
@@ -18,6 +20,8 @@ app.config["DEBUG"] = True  # Enable debug mode
 
 # class Todo(TodoIn):
 #     id: int
+
+bcrypt = Bcrypt(app)
 
 @app.before_serving
 async def startup():
