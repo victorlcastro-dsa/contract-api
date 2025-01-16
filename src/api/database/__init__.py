@@ -1,10 +1,9 @@
 from tortoise import Tortoise, run_async
-from src.api.database.config import Config
+from src.api.database.config import TORTOISE_ORM
 
 async def init_db():
     await Tortoise.init(
-        db_url=Config.DATABASE_URL,
-        modules={'models': ['src.api.models']}
+        config=TORTOISE_ORM
     )
     await Tortoise.generate_schemas()
 

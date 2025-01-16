@@ -3,5 +3,14 @@ import os
 
 load_dotenv()
 
-class Config:
-    DATABASE_URL = os.getenv('DATABASE_URL')
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+TORTOISE_ORM = {
+    "connections": {"default": DATABASE_URL},
+    "apps": {
+        "models": {
+            "models": ["src.api.models", "aerich.models"],
+            "default_connection": "default",
+        },
+    },
+}

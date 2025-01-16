@@ -11,6 +11,23 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: always
+    networks:
+      - contract-api-network
+
+  app:
+    build: .
+    command: poetry run start
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - contract-api-network
+
+networks:
+  contract-api-network:
 
 volumes:
   postgres_data:
