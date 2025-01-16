@@ -1,8 +1,9 @@
 from tortoise import Tortoise, run_async
+from src.api.database.config import Config
 
 async def init_db():
     await Tortoise.init(
-        db_url='postgres://user:password@db:5432/contract_db',
+        db_url=Config.DATABASE_URL,
         modules={'models': ['src.api.models']}
     )
     await Tortoise.generate_schemas()
