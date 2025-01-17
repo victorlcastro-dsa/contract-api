@@ -2,7 +2,10 @@ from pydantic import BaseModel as PydanticBaseModel
 from datetime import datetime
 from typing import Optional
 
-class BaseModelSchema(PydanticBaseModel):
+class BaseRequestSchema(PydanticBaseModel):
+    pass
+
+class BaseResponseSchema(PydanticBaseModel):
     id: int
     created_at: datetime
     updated_at: datetime

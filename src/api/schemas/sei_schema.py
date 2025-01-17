@@ -1,6 +1,11 @@
-from .base_schema import BaseModelSchema
+from .base_schema import BaseRequestSchema,BaseResponseSchema
 
-class SeiSchema(BaseModelSchema):
+class SeiRequestSchema(BaseRequestSchema):
+    login: str
+    password_hash: str
+    url: str
+
+class SeiResponseSchema(BaseResponseSchema):
     login: str
     password_hash: str
     url: str

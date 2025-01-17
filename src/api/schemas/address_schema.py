@@ -1,8 +1,17 @@
-from .base_schema import BaseModelSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema
 from typing import Optional
 
-class AddressSchema(BaseModelSchema):
-    id: int
+class AddressRequestSchema(BaseRequestSchema):
+    type: str
+    street: str
+    number: str
+    neighborhood: str
+    city: str
+    state: str
+    complement: Optional[str] = None
+    zip_code: str
+
+class AddressResponseSchema(BaseResponseSchema):
     type: str
     street: str
     number: str

@@ -1,12 +1,12 @@
-from .union_schema import UnionSchema
-from .sei_schema import SeiSchema
-from .address_schema import AddressSchema
-from .organization_client_schema import OrganizationClientSchema
-from .contract_schema import ContractSchema
-from .attachment_schema import AttachmentSchema
-from .general_information_schema import GeneralInformationSchema
-from .item_schema import ItemSchema
-from .role_schema import RoleSchema
-from .reassignment_schema import ReassignmentSchema
-from .additional_schema import AdditionalSchema
-from .contact_schema import ContactSchema
+from .union_schema import UnionRequestSchema, UnionResponseSchema
+from .sei_schema import SeiRequestSchema, SeiResponseSchema
+from .address_schema import AddressRequestSchema, AddressResponseSchema
+from .organization_client_schema import OrganizationClientRequestSchema, OrganizationClientResponseSchema
+from .contract_schema import ContractRequestSchema, ContractResponseSchema
+from .attachment_schema import AttachmentRequestSchema, AttachmentResponseSchema
+from .general_information_schema import GeneralInformationRequestSchema, GeneralInformationResponseSchema
+from .item_schema import ItemRequestSchema, ItemResponseSchema
+from .role_schema import RoleRequestSchema, RoleResponseSchema
+from .reassignment_schema import ReassignmentRequestSchema, ReassignmentResponseSchema
+from .additional_schema import AdditionalRequestSchema, AdditionalResponseSchema
+from .contact_schema import ContactRequestSchema, ContactResponseSchema
