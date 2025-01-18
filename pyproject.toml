@@ -1,7 +1,7 @@
 [project]
 name = "contract-api"
 version = "0.1.0"
-description = "An API developed in Python with the Quart framework, designed to manage contract-related information. It offers routes for creating, retrieving, updating, and deleting data."
+description = "An API under development in Python with the Quart framework, designed to manage contract-related information. It offers routes for creating, retrieving, updating, and deleting data."
 authors = [
     {name = "Victor L. Castro",email = "victorlcastro.dsa@gmail.com"}
 ]

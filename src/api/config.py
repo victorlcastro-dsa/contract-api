@@ -9,9 +9,9 @@ class QuartSchemaConfig:
     TITLE = "contract-api"
     VERSION = "0.1.0"
     DESCRIPTION = (
-        "The `contract-api` is developed in Python using the Quart framework. "
+        "The `contract-api` is under development in Python using the Quart framework. "
         "It is designed to manage information related to contracts, offering routes for creating, retrieving, updating, and deleting data. "
-        "The API includes features such as authentication, database integration, and various utility endpoints to handle contract management efficiently."
+        "The API will include features such as authentication, database integration, and various utility endpoints to handle contract management efficiently."
     )
     CONTACT_EMAIL = "victorlcastro.dsa@gmail.com"
     CONTACT_NAME = "Victor L. Castro"
