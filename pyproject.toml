@@ -1,7 +1,7 @@
 [project]
 name = "contract-api"
 version = "0.1.0"
-description = "Uma API desenvolvida em Python com o framework Quart, projetada para gerenciar informações relacionadas a contratos. Oferece rotas para criação, consulta, atualização e exclusão de dados"
+description = "An API developed in Python with the Quart framework, designed to manage contract-related information. It offers routes for creating, retrieving, updating, and deleting data."
 authors = [
     {name = "Victor L. Castro",email = "victorlcastro.dsa@gmail.com"}
 ]
@@ -17,7 +17,7 @@ dependencies = [
     "validate-docbr (>=1.10.0,<2.0.0)",
     "quart-bcrypt (>=0.0.9,<0.0.10)",
     "python-dateutil (>=2.9.0.post0,<3.0.0)",
-    "email-validator (>=2.2.0,<3.0.0)",
+    "email-validator (>=2.2.0,<3.0.0)"
 ]
 
 [build-system]
