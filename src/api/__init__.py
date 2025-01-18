@@ -50,31 +50,3 @@ async def shutdown():
 
 def run() -> None:
     app.run(host="0.0.0.0")
-
-# TODO: Standardize Responses more robustly because some errors are not documented
-
-# TODO: Document possible requests and responses with @document_request and @document_response
-
-# FIXME: Responses with data that do not follow a valid format do not have a robust response; they are returning an HTML file stating that there was an error because the server could not understand
-
-# TODO: Add authentication/authorization logic for the routes
-
-# TODO: Add business logic in the services
-
-# TODO: Add exception handling logic
-
-# TODO: Add error handling logic
-
-# TODO: Abstract configurations into configuration files and enums
-
-# TODO: Add filter logic via query string and document
-
-# TODO: Add pagination logic and document
-
-# TODO: Improve Swagger documentation
-
-# TODO: Enhance code documentation
-
-# TODO: Improve Dockerfile and docker-compose.yml files
-
-# TODO: Add tests
