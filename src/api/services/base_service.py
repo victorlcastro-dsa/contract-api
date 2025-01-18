@@ -1,9 +1,11 @@
 from typing import Generic, TypeVar, List, Optional
+from pydantic import BaseModel as PydanticBaseModel
 from ..repositories.interfaces.base_repository_interface import BaseRepositoryInterface
 
 T = TypeVar('T')
+M = TypeVar('M')
 
-class BaseService(Generic[T]):
+class BaseService(Generic[T, M]):
     def __init__(self, repository: BaseRepositoryInterface[T]):
         self.repository = repository
 
@@ -13,7 +15,9 @@ class BaseService(Generic[T]):
     async def get_all(self) -> List[T]:
         return await self.repository.get_all()
 
-    async def create(self, entity: T) -> T:
+    async def create(self, data: PydanticBaseModel) -> T:
+        entity_data = data.dict()
+        entity = self.repository.model(**entity_data)
         return await self.repository.create(entity)
 
     async def update(self, id: int, **kwargs) -> Optional[T]:
