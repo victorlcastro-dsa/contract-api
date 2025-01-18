@@ -1,6 +1,5 @@
 from tortoise import fields
 from .base_model import BaseModel
-from ..utils import validate_zip_code
 
 class Address(BaseModel):
     type = fields.CharField(max_length=50)
@@ -10,7 +9,7 @@ class Address(BaseModel):
     city = fields.CharField(max_length=255)
     state = fields.CharField(max_length=2)
     complement = fields.TextField(null=True)
-    zip_code = fields.CharField(max_length=15, validators=[validate_zip_code])
+    zip_code = fields.CharField(max_length=15)
 
     class Meta:
         unique_together = (
