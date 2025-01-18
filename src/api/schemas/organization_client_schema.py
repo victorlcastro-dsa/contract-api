@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from typing import Optional
 
 class OrganizationClientRequestSchema(BaseRequestSchema):
@@ -14,3 +14,6 @@ class OrganizationClientResponseSchema(BaseResponseSchema):
     uasg: Optional[str] = None
     trade_name: Optional[str] = None
     cnpj: str
+
+class OrganizationClientListResponseSchema(BaseListResponseSchema[OrganizationClientResponseSchema]):
+    pass

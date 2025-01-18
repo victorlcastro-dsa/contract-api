@@ -1,12 +1,12 @@
-from .union_schema import UnionRequestSchema, UnionResponseSchema
-from .sei_schema import SeiRequestSchema, SeiResponseSchema
-from .address_schema import AddressRequestSchema, AddressResponseSchema
-from .organization_client_schema import OrganizationClientRequestSchema, OrganizationClientResponseSchema
-from .contract_schema import ContractRequestSchema, ContractResponseSchema
-from .attachment_schema import AttachmentRequestSchema, AttachmentResponseSchema
-from .general_information_schema import GeneralInformationRequestSchema, GeneralInformationResponseSchema
-from .item_schema import ItemRequestSchema, ItemResponseSchema
-from .role_schema import RoleRequestSchema, RoleResponseSchema
-from .reassignment_schema import ReassignmentRequestSchema, ReassignmentResponseSchema
-from .additional_schema import AdditionalRequestSchema, AdditionalResponseSchema
-from .contact_schema import ContactRequestSchema, ContactResponseSchema
+from .union_schema import UnionRequestSchema, UnionResponseSchema, UnionListResponseSchema
+from .sei_schema import SeiRequestSchema, SeiResponseSchema, SeiListResponseSchema
+from .address_schema import AddressRequestSchema, AddressResponseSchema, AddressListResponseSchema
+from .organization_client_schema import OrganizationClientRequestSchema, OrganizationClientResponseSchema, OrganizationClientListResponseSchema
+from .contract_schema import ContractRequestSchema, ContractResponseSchema,ContractListResponseSchema
+from .attachment_schema import AttachmentRequestSchema, AttachmentResponseSchema, AttachmentListResponseSchema
+from .general_information_schema import GeneralInformationRequestSchema, GeneralInformationResponseSchema, GeneralInformationListResponseSchema
+from .item_schema import ItemRequestSchema, ItemResponseSchema, ItemListResponseSchema
+from .role_schema import RoleRequestSchema, RoleResponseSchema, RoleListResponseSchema
+from .reassignment_schema import ReassignmentRequestSchema, ReassignmentResponseSchema, ReassignmentListResponseSchema
+from .additional_schema import AdditionalRequestSchema, AdditionalResponseSchema, AdditionalListResponseSchema
+from .contact_schema import ContactRequestSchema, ContactResponseSchema, ContactListResponseSchema

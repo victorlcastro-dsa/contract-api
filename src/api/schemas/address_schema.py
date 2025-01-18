@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from typing import Optional
 
 class AddressRequestSchema(BaseRequestSchema):
@@ -20,3 +20,6 @@ class AddressResponseSchema(BaseResponseSchema):
     state: str
     complement: Optional[str] = None
     zip_code: str
+
+class AddressListResponseSchema(BaseListResponseSchema[AddressResponseSchema]):
+    pass

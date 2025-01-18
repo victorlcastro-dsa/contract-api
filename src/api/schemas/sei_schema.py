@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema,BaseResponseSchema
+from .base_schema import BaseRequestSchema,BaseResponseSchema, BaseListResponseSchema
 
 class SeiRequestSchema(BaseRequestSchema):
     login: str
@@ -9,3 +9,6 @@ class SeiResponseSchema(BaseResponseSchema):
     login: str
     password_hash: str
     url: str
+
+class SeiListResponseSchema(BaseListResponseSchema[SeiResponseSchema]):
+    pass

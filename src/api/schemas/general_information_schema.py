@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from datetime import date
 from typing import Optional
 
@@ -41,3 +41,6 @@ class GeneralInformationResponseSchema(BaseResponseSchema):
     office_city: Optional[str] = None
     contractual_guarantee: bool = False
     guarantee_percentage: Optional[float] = None
+
+class GeneralInformationListResponseSchema(BaseListResponseSchema[GeneralInformationResponseSchema]):
+    pass

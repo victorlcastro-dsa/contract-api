@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from datetime import date
 from typing import Optional
 
@@ -23,3 +23,6 @@ class AttachmentResponseSchema(BaseResponseSchema):
     request_date: Optional[date] = None
     update_date: Optional[date] = None
     url: str
+
+class AttachmentListResponseSchema(BaseListResponseSchema[AttachmentResponseSchema]):
+    pass

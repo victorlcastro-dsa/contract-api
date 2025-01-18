@@ -1,6 +1,8 @@
 from pydantic import BaseModel as PydanticBaseModel
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List, TypeVar, Generic
+
+T = TypeVar('T')
 
 class BaseRequestSchema(PydanticBaseModel):
     pass
@@ -13,3 +15,6 @@ class BaseResponseSchema(PydanticBaseModel):
 
     class Config:
         from_attributes = True
+
+class BaseListResponseSchema(PydanticBaseModel, Generic[T]):
+    items: List[T]

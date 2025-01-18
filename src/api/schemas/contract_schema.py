@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from datetime import date
 from typing import Optional
 
@@ -31,3 +31,6 @@ class ContractResponseSchema(BaseResponseSchema):
     adjustment_date: Optional[date] = None
     extension_description: Optional[str] = None
     extension_date: Optional[date] = None
+
+class ContractListResponseSchema(BaseListResponseSchema[ContractResponseSchema]):
+    pass

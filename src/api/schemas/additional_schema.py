@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from datetime import date
 from typing import Optional
 
@@ -19,3 +19,6 @@ class AdditionalResponseSchema(BaseResponseSchema):
     percentage: Optional[float] = None
     description: Optional[str] = None
     base_date: Optional[date] = None
+
+class AdditionalListResponseSchema(BaseListResponseSchema[AdditionalResponseSchema]):
+    pass

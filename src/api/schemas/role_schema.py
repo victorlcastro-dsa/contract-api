@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from datetime import date
 from typing import Optional
 
@@ -35,3 +35,6 @@ class RoleResponseSchema(BaseResponseSchema):
     requirements: Optional[str] = None
     exams: Optional[str] = None
     base_date: Optional[date] = None
+
+class RoleListResponseSchema(BaseListResponseSchema[RoleResponseSchema]):
+    pass

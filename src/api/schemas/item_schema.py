@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from typing import Optional
 
 class ItemRequestSchema(BaseRequestSchema):
@@ -16,3 +16,6 @@ class ItemResponseSchema(BaseResponseSchema):
     quantity: int
     description: Optional[str] = None
     frequency: Optional[str] = None
+
+class ItemListResponseSchema(BaseListResponseSchema[ItemResponseSchema]):
+    pass

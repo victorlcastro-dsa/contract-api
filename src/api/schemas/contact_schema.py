@@ -1,4 +1,4 @@
-from .base_schema import BaseRequestSchema, BaseResponseSchema
+from .base_schema import BaseRequestSchema, BaseResponseSchema, BaseListResponseSchema
 from pydantic import EmailStr
 from typing import Optional
 
@@ -17,3 +17,6 @@ class ContactResponseSchema(BaseResponseSchema):
     residence_number: Optional[str] = None
     whatsapp_number: Optional[str] = None
     email: Optional[EmailStr] = None
+
+class ContactListResponseSchema(BaseListResponseSchema[ContactResponseSchema]):
+    pass
