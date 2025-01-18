@@ -1,6 +1,6 @@
 from tortoise import fields
 from .base_model import BaseModel
-from ..utils.validators import validate_email_address, validate_phone_number
+from ..utils import validate_email_address, validate_phone_number
 
 class Contact(BaseModel):
     role = fields.ForeignKeyField("models.Role", related_name="contacts")

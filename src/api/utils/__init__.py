@@ -1,0 +1,1 @@
+from .validators import validate_cnpj, validate_zip_code, validate_phone_number, validate_email_address

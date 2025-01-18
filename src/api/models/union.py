@@ -1,6 +1,6 @@
 from .base_model import BaseModel
 from tortoise import fields
-from ..utils.validators import validate_cnpj
+from ..utils import validate_cnpj
 
 class Union(BaseModel):
     name = fields.CharField(max_length=255)

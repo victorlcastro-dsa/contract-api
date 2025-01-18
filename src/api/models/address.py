@@ -1,6 +1,6 @@
 from tortoise import fields
 from .base_model import BaseModel
-from ..utils.validators import validate_zip_code
+from ..utils import validate_zip_code
 
 class Address(BaseModel):
     type = fields.CharField(max_length=50)

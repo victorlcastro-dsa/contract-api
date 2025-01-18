@@ -1,6 +1,6 @@
 from tortoise import fields
 from .base_model import BaseModel
-from ..utils.validators import validate_cnpj
+from ..utils import validate_cnpj
 
 class OrganizationClient(BaseModel):
     address = fields.ForeignKeyField("models.Address", related_name="clients")
