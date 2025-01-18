@@ -1,8 +1,6 @@
 from .base_model import BaseModel
 from tortoise import fields
-from quart_bcrypt import Bcrypt
-
-bcrypt = Bcrypt()
+from ..utils import create_password_hash
 
 class Sei(BaseModel):
     login = fields.CharField(max_length=255)
@@ -13,9 +11,7 @@ class Sei(BaseModel):
         table = "sei"
         unique_together = ("login", "url")
 
-    @classmethod
-    def create_password_hash(cls, password: str) -> str:
-        return bcrypt.generate_password_hash(password).decode('utf-8')
-
-    def check_password(self, password: str) -> bool:
-        return bcrypt.check_password_hash(self.password_hash, password)
+    async def save(self, *args, **kwargs):
+        if not self.password_hash.startswith('$2b$'):
+            self.password_hash = create_password_hash(self.password_hash)
+        await super().save(*args, **kwargs)
