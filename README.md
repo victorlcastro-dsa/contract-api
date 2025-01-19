@@ -34,3 +34,6 @@
 
 # TODO: Implement logging and monitoring mechanisms for better code observability.
 ```
+
+## Obervations
+If you have built the project with Docker Compose for the first time, the `migrations` folder will be created. If you delete the build, image, and container, and then run the compose again, it will generate an error. To resolve this, delete the `migrations` folder and run the compose again.
