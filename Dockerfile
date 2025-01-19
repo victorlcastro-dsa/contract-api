@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11-slim
+FROM python:3.11-alpine
 
 # Set the working directory in the container
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential iputils-ping
+RUN apk update && apk add --no-cache build-base iputils
 
 # Install Poetry
 RUN pip install poetry
