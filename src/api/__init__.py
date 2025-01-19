@@ -1,10 +1,9 @@
 from quart import Quart
-from quart_schema import QuartSchema, Info, Contact
 from .database import Database
 from quart_bcrypt import Bcrypt
 from . import routes
 from . import main
-from .config import QuartConfig, BcryptConfig, QuartSchemaConfig
+from .config import QuartConfig, BcryptConfig, configure_schema
 
 app = Quart(__name__)
 app.config.from_object(QuartConfig)
@@ -12,18 +11,7 @@ app.config.from_object(BcryptConfig)
 
 bcrypt = Bcrypt(app)
 database = Database()
-QuartSchema(app, info=Info(
-    title=QuartSchemaConfig.TITLE,
-    version=QuartSchemaConfig.VERSION,
-    description=QuartSchemaConfig.DESCRIPTION,
-    contact=Contact(
-        email=QuartSchemaConfig.CONTACT_EMAIL,
-        name=QuartSchemaConfig.CONTACT_NAME,
-        url=QuartSchemaConfig.CONTACT_URL
-    ),
-    summary=QuartSchemaConfig.SUMMARY,
-    terms_of_service=QuartSchemaConfig.TERMS_OF_SERVICE
-), tags=QuartSchemaConfig.TAGS, conversion_preference=QuartSchemaConfig.CONVERSION_PREFERENCE)
+configure_schema(app)
 
 # Registrar os blueprints
 app.register_blueprint(main.main_bp)

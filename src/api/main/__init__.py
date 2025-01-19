@@ -1,12 +1,7 @@
-from quart import Blueprint, jsonify
-from quart_schema import tag
+from quart import Blueprint
+from .routes import index
 
 main_bp = Blueprint('main', __name__)
 
-@main_bp.route('/', methods=['GET'])
-@tag(["Main"])
-async def index():
-    """
-    Main route of the API.
-    """
-    return jsonify({"message": "Welcome to the Contracts API!"})
+# Registrar as rotas
+main_bp.add_url_rule('/', view_func=index)
