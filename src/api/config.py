@@ -1,12 +1,15 @@
 from quart_schema import QuartSchema, Info, Contact
 
 class QuartConfig:
+    """Configuration for Quart application."""
     DEBUG = True  # Enable debug mode
 
 class BcryptConfig:
+    """Configuration for Bcrypt."""
     BCRYPT_LOG_ROUNDS = 12  # Security configuration for Bcrypt
 
 class QuartSchemaConfig:
+    """Configuration for Quart Schema."""
     CONVERSION_PREFERENCE = 'pydantic'
     TITLE = "contract-api"
     VERSION = "0.1.0"
@@ -36,7 +39,8 @@ class QuartSchemaConfig:
         {"name": "Contact", "description": "Management of contacts, including creation, retrieval, updating, and deletion of contacts."}
     ]
 
-def configure_schema(app):
+def configure_schema(app): # TODO: Move to a more appropriate location if necessary
+    """Configure the Quart Schema for the application."""
     QuartSchema(app, info=Info(
         title=QuartSchemaConfig.TITLE,
         version=QuartSchemaConfig.VERSION,
