@@ -22,5 +22,12 @@ EXPOSE 5000
 # Define environment variable
 ENV NAME=World
 
+# Add entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Run the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
+
 # Run the application
 CMD ["poetry", "run", "start"]

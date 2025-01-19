@@ -1,9 +1,9 @@
-# Ignorar arquivos e diretórios Python compilados
+# Ignore compiled Python files and directories
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Ignorar ambientes virtuais
+# Ignore virtual environments
 .venv/
 env/
 venv/
@@ -11,25 +11,19 @@ ENV/
 env.bak/
 venv.bak/
 
-# Ignorar arquivos de configuração do Poetry
-poetry.lock
-
-# Ignorar diretórios de migrações
-migrations/
-
-# Ignorar caches de testes
+# Ignore test caches
 .pytest_cache/
 .dmypy.json
 dmypy.json
 
-# Ignorar logs
+# Ignore logs
 *.log
 
-# Ignorar arquivos de configuração locais
+# Ignore local configuration files
 .env
 local_settings.py
 
-# Ignorar diretórios de build
+# Ignore build directories
 build/
 dist/
 downloads/
@@ -46,11 +40,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Ignorar arquivos de instalação
+# Ignore installation files
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Ignorar relatórios de testes e cobertura
+# Ignore test and coverage reports
 htmlcov/
 .tox/
 .nox/
@@ -64,12 +58,12 @@ coverage.xml
 .hypothesis/
 cover/
 
-# Ignorar documentação gerada
+# Ignore generated documentation
 docs/_build/
 
-# Ignorar checkpoints do Jupyter Notebook
+# Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-# Ignorar arquivos de configuração do IPython
+# Ignore IPython configuration files
 profile_default/
 ipython_config.py
